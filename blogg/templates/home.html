@@ -1,0 +1,22 @@
+{% extends 'base.html' %} {% block content%}
+<h1>Welcome To Py DJ Blog</h1>
+<br />
+<br />
+{% for p in posts %}
+<div class="card">
+  <div class="card-body">
+    <div class="row">
+      <div class="col-md-11">
+        <h4><a class="card-title" href="#">{{p.title}}</a></h4>
+      </div>
+    </div>
+    <br />
+    <h6 class="card-subtitle mb-2 text-muted">
+      By {{p.author}} at {{p.date_posted}} <br />
+    </h6>
+    <p class="card-text" style="white-space: pre">{{p.content}}</p>
+  </div>
+</div>
+<br />
+
+{% endfor %} {% endblock%}
